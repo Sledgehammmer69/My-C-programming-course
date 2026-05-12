@@ -1,0 +1,14 @@
+im gonna write my notes here for c programming.
+this is just the start. since we'll be using cs50's library in the early stages
+im gonna create a Makefile to include cs50.h
+
+inside Makefile:
+hello: hello.c
+	gcc hello.c -lcs50 -o hello
+
+then in terminal:
+make hello
+./hello
+
+
+
