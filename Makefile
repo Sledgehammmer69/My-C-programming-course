@@ -6,3 +6,6 @@ compare: compare.c
 
 cat: cat.c
 	gcc cat.c -lcs50 -o cat
+
+calculator: calculator.c
+	gcc calculator.c -lcs50 -o calculator
