@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void)
+{
+    const int n = 5;                // const is used...constant
+
+    for (int row = 0; row < n; row++)
+    {
+        for (int column = 0; column < n; column++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+}

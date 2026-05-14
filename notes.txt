@@ -10,5 +10,153 @@ then in terminal:
 make hello
 ./hello
 
+using loops:
+
+#include <stdio.h>
+
+int main(void)
+{   
+    //printing it manually without loop
+    /*printf("meow\n"); 
+    printf("meow\n");
+    printf("meow\n");*/
+
+    //with loop
+    int i = 0;
+    while(i < 4)
+    {
+        printf("meow\n");
+        i++;
+    }
+
+    for(int j = 0; j < 4 ; j++)
+    {
+        printf("woof\n");
+    }
+}
 
 
+we create infinite loop when answer doesnt match
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{   
+    int n;
+    while (true)
+    {
+        n = get_int("What's n?: ");
+        if (n >= 0)
+        {
+            break;
+        }
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow meow \n");
+    }
+}
+
+now we impliment do-while loop....hhehehehe
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{   
+    int n;
+    do
+    {
+        n = get_int("What's n?; ");
+    }
+    while (n < 0);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow meow \n\n");
+    }
+}
+
+
+Next we gonna use functions....a simple function
+
+in this case we're gonna create our function above main
+the void means the function has no return value and the void in meow(void) means the funnction doesnt take any value in
+
+
+void meow(void)
+{
+    printf("meow\n");
+}
+
+int main(void)
+{   
+    for (int i = 0; i < 3; i++)
+    {
+        meow();
+    }
+}
+
+ultimately we want our main to be above eerything else to ensure that the first thing we see when we open the editor 
+is the main function but C follows a strict rule whereby it reads from top to bottom....so we can use prototype:
+
+//this is a prototype
+void meow(void);
+
+int main(void)
+{   
+    for (int i = 0; i < 3; i++)
+    {
+        meow();
+    }
+}
+
+void meow(void)
+{
+    printf("meow\n");
+}
+
+this is how it looks professionally:
+#include <cs50.h>
+#include <stdio.h>
+
+//this is a prototype
+void meow(int n);
+
+int main(void)
+{   
+    meow(3);
+}
+
+void meow(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("meow\n");
+    }
+}
+
+lastly we gonna take input from user:
+
+
+#include <cs50.h>
+#include <stdio.h>
+
+//this is a prototype
+void meow(int times);
+
+int main(void)
+{   
+    int n = get_int("What is the value of n: ");
+    meow(n);
+}
+
+void meow(int times)
+{
+    for (int i = 0; i < times; i++)
+    {
+        printf("meow\n");
+    }
+}
