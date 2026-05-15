@@ -1,0 +1,26 @@
+#include <cs50.h>
+#include <ctype.h>  //or we can use the ctype library
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("Before: ");
+    printf("After:  ");
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        // s[i] is lowercase
+        //if (s[i] >= 'a' && s[i] <= 'z')
+        if(islower(s[i]))
+        {
+            printf("%c", toupper(s[i]));
+            //printf("%c", s[i] - 32);
+        }
+        //Else if not lowercase
+        else
+        {
+            printf("%c", s[i]);
+        }
+    }
+    printf("\n");
+}
