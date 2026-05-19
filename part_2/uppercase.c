@@ -9,18 +9,7 @@ int main(void)
     printf("After:  ");
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        // s[i] is lowercase
-        //if (s[i] >= 'a' && s[i] <= 'z')
-        if(islower(s[i]))
-        {
-            printf("%c", toupper(s[i]));
-            //printf("%c", s[i] - 32);
-        }
-        //Else if not lowercase
-        else
-        {
-            printf("%c", s[i]);
-        }
+        printf("%c", toupper(s[i]));        //apparently the toupper function is smart enough to change it for you...so no need if statement
     }
     printf("\n");
 }

@@ -9,3 +9,9 @@ string: string.c
 
 uppercase: uppercase.c
 	gcc uppercase.c -lcs50 -o uppercase
+
+greet: greet.c
+	gcc greet.c -lcs50 -o greet
+
+status: status.c
+	gcc status.c -lcs50 -o status
