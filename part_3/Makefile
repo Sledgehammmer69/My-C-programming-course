@@ -6,3 +6,6 @@ search2: search2.c
 
 phonebook: phonebook.c
 	gcc phonebook.c -lcs50 -o phonebook
+
+phonebook2: phonebook2.c
+	gcc phonebook2.c -lcs50 -o phonebook2
